@@ -1,6 +1,10 @@
 # chatbot_app.py
 
 import streamlit as st
+
+# 페이지 설정을 가장 위에 위치
+st.set_page_config(page_title="딥리드 어휘 챗봇", layout="centered")
+
 import requests
 from bs4 import BeautifulSoup
 from transformers import PreTrainedTokenizerFast, GPT2LMHeadModel
@@ -36,7 +40,6 @@ def search_korean_dictionary(word):
 
 # ───────────────────────────────
 # Streamlit UI
-st.set_page_config(page_title="딥리드 어휘 챗봇", layout="centered")
 st.title("🧠 딥리드 어휘 챗봇")
 st.caption("KoGPT2 + 표준국어대사전 API 기반")
 
